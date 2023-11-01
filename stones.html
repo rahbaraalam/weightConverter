@@ -84,7 +84,6 @@
             font-weight: lighter;
             color: black;
         }
-
         #slider{
             width: 300px;
             min-height: 90%;
@@ -107,6 +106,7 @@
             color: black;
             background-color: ;
         }
+
         
 
     </style>
@@ -115,15 +115,15 @@
     <div class="container">
         <button onclick="display();" id="menu-btn">menu</button>
         <div id="slider">
-            <a href="stones.html">convert weight from stones to other unit</a>
+            <a href="index.html">convert weight from kilograms to other unit</a>
         </div>
         <h3>Weight conversion program</h3>
-        <input type="text" id="weight" placeholder="enter weight in kilogram" autofocus> <br><br>  
+        <input type="text" id="weight" placeholder="enter weight in stones" autofocus> <br><br>  
         <div class="btn-container">
-            <button onclick="pound()" class="btn btn1">Convert kilograms to pound</button>
-            <button onclick="ounces()" class="btn btn2">Convert kilograms to ounces</button>
-            <button onclick="gram()" class="btn btn3">Convert kilograms to grams</button>
-            <button onclick="stones()" class="btn btn4">Convert kilograms to stones</button>
+            <button onclick="pound()" class="btn btn1">Convert stones to pounds</button>
+            <button onclick="ounces()" class="btn btn2">Convert stones to ounces</button>
+            <button onclick="gram()" class="btn btn3">Convert stones to grams</button>
+            <button onclick="stones()" class="btn btn4">Convert stones to kilograms</button>
         </div>
 
         <div class="text-container">
@@ -141,9 +141,9 @@
         function pound(){
             if(document.querySelector("#weight").value!=0){
                 
-                var kg = document.querySelector("#weight").value;
-                var lb = kg*2.2046;
-                document.querySelector("#pound").innerHTML = kg+" kilogram = " + lb +" pound";
+                var stone = document.querySelector("#weight").value;
+                var lb = stone*14;
+                document.querySelector("#pound").innerHTML = stone+" stones = " + lb +" pound";
                     
                 }else{
                     alert("please enter number you want to convert.")
@@ -152,9 +152,9 @@
         //Kilograms to Ounces
             function ounces(){
             if(document.querySelector("#weight").value!=0){
-                    var kg = document.querySelector("#weight").value;
-                    var oz = kg*35.274;
-                    document.querySelector("#ounces").innerHTML =kg+" kilogram = " + oz + " ounces";
+                    var stone = document.querySelector("#weight").value;
+                    var oz = stone*224;
+                    document.querySelector("#ounces").innerHTML =stone+" stones = " + oz + " ounces";
 
                 }else{
                     
@@ -165,9 +165,9 @@
         //Kilograms to Grams
         function gram(){
         if(document.querySelector("#weight").value !=0){
-             var kg = document.querySelector("#weight").value;
-                var grm = kg*1000;
-                document.querySelector("#gram").innerHTML=kg+" kilogram = " + grm + " grams";
+                var stone= document.querySelector("#weight").value;
+                var grm = stone*6350.29;
+                document.querySelector("#gram").innerHTML=stone+" stones = " + grm + " grams";
 
             }else{
              alert("please enter number you want to convert.")
@@ -177,18 +177,18 @@
         // Kilograms to Stones
         function stones(){
             if(document.querySelector("#weight").value !=0){
-             var kg = document.querySelector("#weight").value;
-                var stone = kg*0.157473;
-                document.querySelector("#gram").innerHTML=kg+" kilogram = " + stone + " stones";
+             var stone = document.querySelector("#weight").value;
+                var kg = stone*6.35029;
+                document.querySelector("#stones").innerHTML=stone+" stone = " + kg + " kilograms";
 
             }else{
              alert("please enter number you want to convert.")
                 
             }
-        }  
-        
+        }
 
-        //slider toggle function
+
+
        function display(){
         let x=document.querySelector("#slider");
         if(x.style.display==="none"){
